@@ -5,22 +5,26 @@ Welcome to the Guessing Game
 """)
 
 secret_number: int = 42
+totalRounds = 3
+round = 1
 
-number_user = input("Enter Your Number: ")
-number_user = int(number_user)
+while(round <= totalRounds):
+    print("Round {} of {}".format(round, totalRounds))
+    number_user = input("Enter Your Number: ")
+    print("Your Typed: ", number_user)
+    number_user = int(number_user)
 
-correct = secret_number == number_user
-maior = number_user > secret_number
-menor = number_user < secret_number
+    correct = secret_number == number_user
+    maior = number_user > secret_number
+    menor = number_user < secret_number
 
-print("Your Typed: ", number_user)
+    if (correct):
+        print("Correct")
+        round = 4
+    else:
+        if (maior):
+            print("Incorrect! Your Number is Greater than the Secret Number")
+        elif (menor):
+             print("Incorrect! Your number is Less than the Secret Number")
 
-if (correct):
-    print("Correct")
-else:
-    if (maior):
-        print("Incorrect! Your Number is Greater than the Secret Number")
-    elif (menor):
-        print("Incorrect! Your number is Less than the Secret Number")
-
-print("End Game!!!")
+        round = round + 1
