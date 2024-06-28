@@ -15,10 +15,10 @@ def select_game():
 
     if(game == 1):
         print("playing a Hangman Game.")
-        forca.jogar()
+        forca.play()
     elif(game == 2):
         print("Playing a guessing Game.")
-        guessing.jogar()
+        guessing.play()
 
 if(__name__ == "__main__"):
     select_game()
