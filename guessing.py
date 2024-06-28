@@ -7,7 +7,7 @@ def play():
     ****************************
     """)
 
-    secret_number: random.randrange(1, 101)
+    secret_number = random.randrange(1, 101)
     totalRounds = 3
     points = 1000
 
